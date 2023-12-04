@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ country_name }}概况</title>
+    <!-- 引入地图API库 -->
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=G2q4faIwMZ5HhbNzyQqtXGOrk6o18cH1"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://x0.ifengimg.com/res/2021/CA81108C2FDFB047594DDF218FC838C0DDFCAFAF_size88_w750_h499.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .switch-button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            color: #333;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 10px;
+            margin: 0 10px;
+        }
+
+        .active {
+            background-color: #333;
+            color: #fff;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<h1>{{ country_name }}概况</h1>
+<div>
+    <ul>
+        <li>人口：{{ population }}</li>
+        <li>首都：{{ capital }}</li>
+        <li>语言：{{ language }}</li>
+        <li>货币：{{ currency }}</li>
+        <!-- ... 其他信息 -->
+    </ul>
+</div>
+<div style="display: flex; justify-content: left;">
+    <form action="./Afghanistan/history">
+        <button style="background: coral">历史</button>
+    </form>
+    <form action="./Afghanistan/diplomacy">
+        <button style="background: #dc3545">外交</button>
+    </form>
+    <form action="./Afghanistan/culture">
+        <button style="background: burlywood">文化</button>
+    </form>
+    <form action="./Afghanistan/message">
+        <button style="background: blue">信息</button>
+    </form>
+    <form action="./Afghanistan/index">
+        <button style="background: skyblue">新页面</button>
+    </form>
+</div>
+<!-- 地图容器 -->
+<div id="map"></div>
+
+<img src="/static/images/1.jpg" alt="">
+
+<script>
+    // 设置地图样式
+    var mapStyle = [
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": {
+                "color": "#C0E4F3"
+            }
+        },
+        {
+            "featureType": "land",
+            "elementType": "all",
+            "stylers": {
+                "color": "#f2f2f2"
+            }
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry",
+            "stylers": {
+                "visibility": "on"
+            }
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry.fill",
+            "stylers": {
+                "color": "#ffffff"
+            }
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry.stroke",
+            "stylers": {
+                "color": "#dcdcdc"
+            }
+        }
+        // 其他样式设置...
+    ];
+    // 创建地图实例
+    var map = new BMap.Map("map");
+
+    // 创建中心点坐标（喀布尔）
+    var centerPoint = new BMap.Point(69.2075, 34.5553);
+    var marker = new BMap.Marker(centerPoint);
+    // 将标记点添加到地图上
+    map.addOverlay(marker);
+    // 设置地图中心点和缩放级别
+    map.centerAndZoom(centerPoint, 12);
+
+    // 添加缩放控件
+    var zoomControl = new BMap.NavigationControl();
+    map.addControl(zoomControl);
+
+    // 添加平移缩放控件
+    var navigationControl = new BMap.NavigationControl({
+        type: BMAP_NAVIGATION_CONTROL_LARGE
+    });
+    map.addControl(navigationControl);
+
+    // 添加缩放平移控件
+    var navigationControl = new BMap.NavigationControl({
+        anchor: BMAP_ANCHOR_TOP_LEFT,
+        offset: new BMap.Size(50, 50),
+        type: BMAP_NAVIGATION_CONTROL_ZOOM
+    });
+    map.addControl(navigationControl);
+
+    map.addEventListener("mousewheel", function (e) {
+        var delta = e.wheelDelta || -e.detail;
+        var zoom = map.getZoom();
+        if (delta > 0) {
+            map.setZoom(zoom + 1); // 放大地图
+        } else {
+            map.setZoom(zoom - 1); // 缩小地图
+        }
+    });
+
+</script>
+</body>
+</html>

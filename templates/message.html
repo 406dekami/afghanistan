@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Afghanistan Population Entries</title>
+</head>
+<body>
+<h1>Afghanistan Population Entries</h1>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table caption {
+        font-size: 2em;
+        font-weight: bold;
+        margin: 1em 0;
+    }
+
+    th, td {
+        border: 1px solid #999;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    table thead tr {
+        background-color: #008c8c;
+        color: #fff;
+    }
+
+    table tbody tr:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    table tbody tr:hover {
+        background-color: #ccc;
+    }
+
+    table tbody tr td:first-child {
+        color: #f40;
+    }
+
+    table tfoot tr td {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url("https://x0.ifengimg.com/res/2021/CA81108C2FDFB047594DDF218FC838C0DDFCAFAF_size88_w750_h499.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 20px;
+    }
+
+</style>
+<table>
+    <caption>阿富汗人口现状</caption>
+    <thead>
+    <tr>
+        <th>年份</th>
+        <th>人口</th>
+        <th>年度百分比变化</th>
+        <th>年度变化</th>
+        <th>移民净流量</th>
+        <th>中位年龄</th>
+        <th>生育率</th>
+        <th>人口密度（每平方公里）</th>
+        <th>城市人口占比（%）</th>
+        <th>城市人口</th>
+        <th>国家在世界人口中的占比</th>
+        <th>世界人口</th>
+        <th>阿富汗全球排名</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for entry in entries %}
+        <tr>
+            <td>{{ entry.year }}</td>
+            <td>{{ entry.population }}</td>
+            <td>{{ entry.yearly_change }}</td>
+            <td>{{ entry.yearly_change_0 }}</td>
+            <td>{{ entry.migrants_net_field }}</td>
+            <td>{{ entry.median_age }}</td>
+            <td>{{ entry.fertility_rate }}</td>
+            <td>{{ entry.density_p_km2_field }}</td>
+            <td>{{ entry.urban_pop_field }}</td>
+            <td>{{ entry.urban_population }}</td>
+            <td>{{ entry.country_s_share_of_world_pop }}</td>
+            <td>{{ entry.world_population }}</td>
+            <td>{{ entry.afghanistanglobal_rank }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
+
+

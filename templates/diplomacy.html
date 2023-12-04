@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>外交</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+        }
+
+        .page-header button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            color: #333;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            padding: 5px 10px;
+        }
+
+        .page-content {
+            padding: 20px;
+        }
+
+        /* 根据当前活动的按钮样式来设置 */
+        .active {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <h1>外交</h1>
+        <div>
+            <button id="culture-btn" class="active">文化</button>
+            <button id="diplomacy-btn">外交</button>
+            <button id="history-btn">历史</button>
+        </div>
+    </header>
+    <div class="page-content">
+        <!-- 这里是文化页面的内容 -->
+    </div>
+    <script>
+        // 获取三个按钮的引用
+        const cultureBtn = document.getElementById('culture-btn');
+        const diplomacyBtn = document.getElementById('diplomacy-btn');
+        const historyBtn = document.getElementById('history-btn');
+
+        // 为每个按钮添加点击事件处理程序
+        cultureBtn.addEventListener('click', () => {
+            // 根据需要更新页面的内容或执行其他操作
+            // ...
+            action = "./culture"
+            // 设置当前活动的按钮样式
+            cultureBtn.classList.add('active');
+            diplomacyBtn.classList.remove('active');
+            historyBtn.classList.remove('active');
+        });
+
+        diplomacyBtn.addEventListener('click', () => {
+            // 根据需要更新页面的内容或执行其他操作
+            // ...
+
+            // 设置当前活动的按钮样式
+            cultureBtn.classList.remove('active');
+            diplomacyBtn.classList.add('active');
+            historyBtn.classList.remove('active');
+        });
+
+        historyBtn.addEventListener('click', () => {
+            // 根据需要更新页面的内容或执行其他操作
+            // ...
+
+            // 设置当前活动的按钮样式
+            cultureBtn.classList.remove('active');
+            diplomacyBtn.classList.remove('active');
+            historyBtn.classList.add('active');
+        });
+    </script>
+</body>
+</html>
