@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-#a^!&+_iixyh2a7-=$*rkv^z)fzy%^@i*w%a7@px*#o27_grkg"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True#False
+DEBUG = True  # False
 
 ALLOWED_HOSTS = ['*']
 
@@ -121,19 +121,15 @@ STATICFILES_DIRS = [
 # STATIC_ROOT = './static/admin/'
 STATIC_ROOT = os.path.join(BASE_DIR, './templates/simpleui/')
 
-
 SIMPLEUI_HOME_INFO = False
-
 
 # 设置simpleui 点击首页图标跳转的地址
 SIMPLEUI_INDEX = 'http://127.0.0.1:8000/Afghanistan'
 
-#国情小站管理系统的图标
+# 国情小站管理系统的图标
 # SIMPLEUI_LOGO = 'https://avatars2.githubusercontent.com/u/13655483?s=60&v=4'
 
 SIMPLEUI_ANALYSIS = False
 
 # 指定simpleui默认的主题,指定一个文件名，相对路径就从simpleui的theme目录读取
-SIMPLEUI_DEFAULT_THEME = 'admin.lte.css'
-
-
+SIMPLEUI_DEFAULT_THEME = 'e-black-pro.css'
