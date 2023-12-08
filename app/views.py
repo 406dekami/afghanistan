@@ -11,7 +11,7 @@ class Index(View):
 
     @staticmethod
     def get(request):
-        return render(request, 'index.html')
+        return render(request, 'afghanistan_overview.html')
 
 
 def afghanistan_overview(request):
@@ -50,3 +50,7 @@ def culture(request):
 def output_all_entries(request):
     all_entries = AfghanistanPopulation.objects.all()
     return render(request, 'message.html', {'entries': all_entries})
+
+
+def contact(request):
+    return render(request, 'culture.html')

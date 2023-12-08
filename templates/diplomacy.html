@@ -1,98 +1,546 @@
 <!DOCTYPE html>
-<html lang="zh-hans">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>外交</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .page-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #ccc;
-            padding: 10px;
-        }
-
-        .page-header h1 {
-            margin: 0;
-        }
-
-        .page-header button {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            color: #333;
-            cursor: pointer;
-            font-size: 16px;
-            margin-left: 10px;
-            padding: 5px 10px;
-        }
-
-        .page-content {
-            padding: 20px;
-        }
-
-        /* 根据当前活动的按钮样式来设置 */
-        .active {
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>阿富汗是世界最不发达国家之一。历经战乱，经济破坏殆尽，严重依赖外援。</title>
+	
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css"  type="text/css">
+	
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+	
+	<!-- Owl Carousel Assets -->
+    <link href="../static/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../static/owl-carousel/owl.theme.css" rel="stylesheet">
+	
+	<!-- Custom Fonts -->
+    <link rel="stylesheet" href="../static/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+	
+	<!-- jQuery and Modernizr-->
+	<script src="../static/js/jquery-2.1.1.js"></script>
+	
+	<!-- Core JavaScript Files -->  	 
+    <script src="../static/js/bootstrap.min.js"></script>
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="../static/js/html5shiv.js"></script>
+        <script src="../static/js/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-    <header class="page-header">
-        <h1>外交</h1>
-        <div>
-            <button id="culture-btn" class="active">文化</button>
-            <button id="diplomacy-btn">外交</button>
-            <button id="history-btn">历史</button>
-        </div>
-    </header>
-    <div class="page-content">
-        <!-- 这里是文化页面的内容 -->
-    </div>
-    <script>
-        // 获取三个按钮的引用
-        const cultureBtn = document.getElementById('culture-btn');
-        const diplomacyBtn = document.getElementById('diplomacy-btn');
-        const historyBtn = document.getElementById('history-btn');
 
-        // 为每个按钮添加点击事件处理程序
-        cultureBtn.addEventListener('click', () => {
-            // 根据需要更新页面的内容或执行其他操作
-            // ...
-            action = "./culture"
-            // 设置当前活动的按钮样式
-            cultureBtn.classList.add('active');
-            diplomacyBtn.classList.remove('active');
-            historyBtn.classList.remove('active');
-        });
+<body style="background-image: url('images/1.jpg');">
+<header>
+	<!--Top-->
+	<nav id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<strong>欢迎光临!阿富汗国情小站</strong>
+				</div>
+				<div class="col-md-6">
+					<ul class="list-inline top-link link">
+						<li><a href="./Afghanistan"><i class="fa fa-home"></i> 首页</a></li>
+                        <li><a href="./Afghanistan/history"><i class="fa fa-history"></i> 历史</a></li>
+                        <li><a href="./Afghanistan/culture"><i class="fa fa-globe"></i> 文化</a></li>
+                        <li><a href="./Afghanistan/diplomacy"><i class="fa fa-users"></i> 外交</a></li>
+                        <li><a href="./Afghanistan/contact"><i class="fa fa-comments"></i> 联系我们</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<!--Navigation-->
+    <nav id="menu" class="navbar container">
+		<div class="navbar-header">
+			<button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+			<a class="navbar-brand" href="#">
+				<div class="logo"><span>阿富汗国情小站</span></div>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="afghanistan_overview.html">首页</a></li>
+				<!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">新闻 <i class="fa fa-arrow-circle-o-down"></i></a>
+					<div class="dropdown-menu">
+						<div class="dropdown-inner">
+							<ul class="list-unstyled">
+								<li><a href="archive.html">新闻</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</li>
+				 -->
+				<li><a href="history.html"><i class="fa fa-history"></i> 历史</a></li>
+				<li><a href="culture.html"><i class="fa fa-globe"></i> 文化</a></li>
+				<li><a href="diplomacy.html"><i class="fa fa-users"></i> 外交</a></li>
+				
+				
+				<li><a href="contact.html"><i class="fa fa-envelope"></i> 联系我们</a></li>
+			</ul>
+			
+		</div>
+	</nav>
+</header>
+	<div class="featured container">
+		<div id="owl-demo" class="owl-carousel">
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/1.jpg" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/2.jpg" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/3.jpg" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/8.jpg" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/9.jpg" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/10.jpg" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/11.jpg" />
+				</div>
+			</div>
+			<div class="item">
+				<div class="zoom-container">
+					<div class="zoom-caption">
+						<span>Youtube</span>
+						<a href="single.html">
+							<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+						</a>
+						<p>阿富汗</p>
+					</div>
+					<img src="../static/images/12.jpg" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Header -->
+	
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content" class="single-page container">
+		<div class="row">
+			<div id="main-content" class="col-md-8">
+				<div class="box">
+					<div class="wrap-vid">
+						
+						<img src="../static/images/1.jpg"  width="100%" style="height: 400px;" alt="" />
+					</div>
+					<div class="share">
+						<ul class="list-inline center">
+							<br />
+							<li><a href="#" class="btn btn-facebook"><i class="fa fa-facebook"></i> Share</a></li>
+							<li><a href="#" class="btn btn-twitter"><i class="fa fa-twitter"></i> Tweet</a></li>
+							<li><a href="#" class="btn btn-pinterest"><i class="fa fa-pinterest"></i> Tweet</a></li>
+							<li><a href="#" class="btn btn-google"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+							<li><a href="#" class="btn btn-mail"><i class="fa fa-envelope-o"></i> E-mail</a></li>
+						</ul>
+					</div>
+					<div class="line"></div>
+					<h1 class="vid-name"><a href="#">阿富汗：最穷国家，最硬骨头，中亚小国怎样成为“帝国坟场”？</a></h1>
+					<div class="info">
+						<h5>By <a href="#">Kelvin</a></h5>
+						<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+						<span><i class="fa fa-heart"></i>3,200</span>
+					</div>
+					<p style="margin-top: 20px">
 
-        diplomacyBtn.addEventListener('click', () => {
-            // 根据需要更新页面的内容或执行其他操作
-            // ...
+2021年8月30日，无数的阿富汗人冲向了首都喀布尔的一座机场。就在这一天，驻扎在阿富汗的美军即将全部撤出。一场为期20年的战争也终于画上了句号。
+恐怕就连当年发起阿富汗战争的美国前总统小布什也不会想到，这场以反恐为名的战争最终会成为一代美国人挥之不去的梦魇。
+事实上，这也已经不是阿富汗这个小国第一次拖垮一个世界性的大国了。早在美国之前，阿富汗就接连拖垮了大英帝国和苏联。因此，这个小国也得到了一个“帝国坟场”的绰号。
+尽管今天的阿富汗依旧非常贫穷，但他在稳坐中亚最穷国家的位置时，却也被人们认为是中亚骨头最硬的国家。
+<h4>那么，阿富汗到底凭什么熬死那么多的世界性大国呢？阿富汗的未来又有没有可能摆脱贫穷与落后的面貌呢？</h4>
+					<p style="margin-top: 20px">
 
-            // 设置当前活动的按钮样式
-            cultureBtn.classList.remove('active');
-            diplomacyBtn.classList.add('active');
-            historyBtn.classList.remove('active');
-        });
+天然的“多山之国”
+阿富汗这个名字的意思就是“多山之国”。因此，其境内的地形非常复杂。虽然在和平时期这里无法从事大面积的农业生产，但到了战时这里就会变成天然的游击场地。
+由于阿富汗的地形大多都是山地，当地能够种植的粮食和经济作物始终非常有限。再加上土地大多被掌握在部落酋长的手中，这也使得阿富汗人一直处在贫困的状态之中。
+阿富汗处在中亚与南亚的交汇之地，自古以来，崛起于中亚和南亚的军事强权几乎都会侵略阿富汗。
+阿富汗的经历正好印证了中国的那句古话，——“匹夫无罪，怀璧其罪”。他的地理位置和地理环境恰恰就是其苦难的根源。
+<br>
+（阿富汗的普通儿童）
+19世纪时，英国就曾经派遣侵略部队来到过阿富汗，但当地的阿富汗人却依托着复杂地地形对英军展开了抗击。
+最后，英国人虽然从英属印度出发占领了一部分阿富汗的土地，但阿富汗广大的山区仍然处在阿富汗游击队的控制之下。
+这些地方的民众大多信仰最为原始地伊斯兰教，几乎不愿意跟外界过多地打交道。所以，阿富汗的城市与乡村就形成了两种截然不同的文化结构。直到今天，这种差距依然存在。
+但是，也正是由于阿富汗的民众实在太过贫困，英国在当地的殖民统治几乎很难获得丰厚的回报。
+<br>
+（阿富汗农村的贫民）
+这个地方亦无法产生足够的经济效益，也不能作为商业枢纽来使用除了军事价值之外，阿富汗对英国几乎没有什么用处。反倒是英国每年为了维持在阿富汗的军事存在，还要花掉一大笔的经费。
+这种庞大的开销在英国最为强盛的19世纪尚且能够维持，但当时间即将进入到20世纪的时候，英国财政上的窘境也逐渐凸显了出来。
+1919年，阿富汗人民在其王国领袖阿曼努拉.汗的带领下对驻扎在阿富汗境内的英国殖民军队发动了猛烈的攻击。
+此时的英国，刚刚经历了第一次世界大战的摧残，根本无力来维持在阿富汗的统治。因此，尽管英国国内的政客们极力反对放弃阿富汗，但阿富汗人民还是靠着自己的武力手段争取到了独立的地位。
+<br>
+（十九世纪的英国社会）
+最终，英国派往印度的总督不得不承认了阿富汗独立的事实，并试图用外交途径与阿富汗当时的领导人展开交往，以便继续维持英国在南亚地区的利益。
+不过，在熬走了英国人之后阿富汗人却并没有迎来和平的曙光。因为就在短短的几十年后，他们又将沦为美苏两国进行“地缘争霸”的棋盘。
+<br>
+（阿富汗的地图）
+<br>
+超级大国的噩梦之地
+1979年12月，为了支持阿富汗境内的亲苏政治势力，当时的苏联领导人布列日涅夫悍然发动了一场入侵阿富汗的战争。
+尽管苏联官方对内宣称他们发动这场战争的初衷是要解放阿富汗的人民，但在苏联军队进入阿富汗之后，他们却率先向阿富汗人民举起了武器。
+虽然苏联一直想将自己所信奉的马克思主义传播到阿富汗境内，但阿富汗绝大多数的百姓根本不能理解复杂的马克思主义和辩证法。
+他们的头脑里只有千百年来一成不变的伊斯兰教义和古兰经。在这样的环境下，苏联红军自然而然地就被当成了异教徒来看待。各种针对苏联红军的抵抗和暴力袭击，始终没有停止。
+<br>
+（苏联的前领导人勃列日涅夫）
+这个时候，以美国为首的西方集团立刻加大了对阿富汗抵抗游击队的援助力度。一时之间，来自日本的睡袋、来自美国的火箭筒和来自西欧的医疗器械全部都聚集到了阿富汗游击队的手中。
+当时的美国国家安全顾问布热津斯基在听闻苏联发动了阿富汗战争之后，兴奋地冲着同僚喊道：“我们也是时候要给俄国人制造一场越南战争了！”
+事实证明，这场阿富汗战争的确成为了苏联无法止血的伤口。每年苏联都会在阿富汗战场上消耗掉天文数字般的军费，但苏联红军却迟迟无法控制阿富汗的全部领土。
+最终，苏联不得不在解体之前撤出在阿富汗境内的所有红军部队。阿富汗也迎来了短暂的独立时期。
+<br>
+（入侵阿富汗的苏联红军）
+可正如前文所说的那样，阿富汗的地理位置实在是太过重要了。在苏军撤走之后，美国人又对阿富汗这块“战略要地”动起了歪心思。
+由于美国人一直想将黑手伸进中亚地区，所以他们非常迫切地需要阿富汗为自己充当扩张的“桥头堡”。而在这个时候，当初受到美国人培训和资助的伊斯兰原教旨主义团体也纷纷崛起了。
+在这些团体当中，有一个团体慢慢地形成了一个名为“基地”的恐怖组织。在基地组织的领导人本·拉登看来，无论是俄国人还是美国人他们本质上都是异教徒，所以，基地组织应该对他们发起无差别的袭击。
+因此，从上世纪90年代末开始，本.拉登就一手策划了多起针对美国的恐怖袭击事件。甚至在2001年，本·拉登还一手导演了震惊世界的911恐怖袭击。
+<br>
+（“恐怖组织头目”本.拉登）
+在911事件发生之后，美国的总统小布什几次三番地要求当时的阿富汗塔利班政府交出本.拉登，但小布什的要求全部遭到了塔利班政府的拒绝。
+最终，小布什不得不下令在阿富汗发起一场以反恐为名的战争。但这场看似正义的战争却成为了美国综合国力由盛转衰的一个重要节点。
+从此以后，美国也陷入了跟当年苏联一样的窘境。占领阿富汗本身对于美国来说并没有多大的益处，但美国出于地缘政治需要又不得不持续对阿富汗维持着占领的状态。
+<br>
+（阿富汗的武装游击队）
+更重要的是，由于美军的控制范围仅限于阿富汗的各大城市。塔利班所领导的阿富汗游击队依旧可以在阿富汗农村进行频繁地活动。
+这种消耗战的模式最终还是拖垮了不可一世的美国。2021年8月，时任美国总统拜登不得不宣布让美军从阿富汗地区撤离。这一回，阿富汗似乎终于赢得了主宰自己命运的机会。
+<img src="../static/images/641 (1).webp" width="100%" alt="" />
 
-        historyBtn.addEventListener('click', () => {
-            // 根据需要更新页面的内容或执行其他操作
-            // ...
+（美国前总统小布什）
+<br>
+迷惘的未来
+在过去抗击苏联和美国的过程当中，阿富汗各地的武装组织头目为了能够持续不断地获得资金收入甚至组织当地的农民大面积种起了罂粟。
+因此，在相当长的一段时间之内，阿富汗一直被人们认为是全世界毒品的主要种植基地。这种经济模式对于一个国家来说是相当不正常的。
+在美军撤离阿富汗之后，原来的阿富汗塔利班武装迅速控制了全国绝大多数的城镇，并宣布建立一个新的国家。
+塔利班上台之后的第一件事情就是积极推动阿富汗的经济回到正常的发展轨道之中。为此，塔利班直接在全国范围内发动了一场轰轰烈烈的禁毒运动。
+<br>
+（驻扎在阿富汗地美军部队）
+到了2023年10月，阿富汗境内大量的罂粟田已经变成了可以种植小麦的土地。当地的老百姓终于不用再靠着种植毒品来维持生活了。
+与此同时，阿富汗塔利班政府也吸取了以往的历史教训开始试图发展对外经济和贸易。有国家的经济水平逐渐发展起来，人民才会感到幸福和满足，社会也才会迎来安定团结的局面。
+在2023年的上海进口博览会上，人们就看到了阿富汗方面派出的多家企业。虽然这些企业所销售的商品与其他国家的代表团比起来似乎还是显得有些简陋，但阿富汗这个国家好歹回归了正常。
+如今，阿富汗塔利班政府依然在其国内进行着轰轰烈烈的经济和政治改革。但改革的成效依然需要经受时间和阿富汗普通人民的考验。
+<br>
+（阿富汗塔利班的武装人员）
+在过去100多年的时间里，阿富汗一直被人们戏称为“帝国坟场”。但这个看似戏谑的外号背后却是无数阿富汗人民的血泪与挣扎。如果他们可以选择自己的命运和生活，绝大多数的阿富汗人民也一定是向往和平的。
+作为一个位于中亚地区的小国，阿富汗未来的发展空间依然是非常有限的。但随着一带一路等全球经济框架的逐步建立，曾经为阿富汗带来无数悲剧的地缘优势或许也能成为他们致富的法宝。
+总有一天，这个山地之国一定会找到一条属于自己的发展道路。而生活在这个国家里的人民也能在远离炮火和枪声的地方静静地休养生息…</p>
+					
+					<div class="line"></div>
+					<div class="comment">
+						<h3>发表评论</h3>
+						<form name="form1" method="post" action="">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+									<input type="text" class="form-control input-lg" name="name" id="name" placeholder="标题" required="required" />
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="email" class="form-control input-lg" name="email" id="email" placeholder="邮箱" required="required" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
+										placeholder="内容"></textarea>
+									</div>						
+									<button type="submit" class="btn btn-4 btn-block" name="btnBooking" id="btnBbooking">
+								发布</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+				<div class="box">
+					
+					
+				</div>
+			</div>
+			<div id="sidebar" class="col-md-4">
+				<!---- Start Widget ---->
+				<div class="widget wid-follow">
+					<div class="heading"><h4>新闻头条</h4></div>
+					<div class="content">
+						<!-- <ul class="list-inline">
+							<li>
+								<a href="facebook.com/">
+									<div class="box-facebook">
+										<span class="fa fa-facebook fa-2x icon"></span>
+										<span>1250</span>
+										<span>Fans</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="facebook.com/">
+									<div class="box-twitter">
+										<span class="fa fa-twitter fa-2x icon"></span>
+										<span>1250</span>
+										<span>Fans</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="facebook.com/">
+									<div class="box-google">
+										<span class="fa fa-google-plus fa-2x icon"></span>
+										<span>1250</span>
+										<span>Fans</span>
+									</div>
+								</a>
+							</li>
+						</ul> -->
+						<img src="../static/images/banner.jpg" />
+					</div>
+				</div>
+				<!---- Start Widget ---->
+				<div class="widget wid-post">
+					<div class="heading"><h4>新闻</h4></div>
+					<div class="content">
+						<div class="post wrap-vid">
+							<div class="zoom-container">
+								<div class="zoom-caption">
+									<span>阿富汗</span>
+									<a href="single.html">
+										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+									</a>
+									<p>阿富汗</p>
+								</div>
+								<img src="../static/images/1.jpg" />
+							</div>
+							<div class="wrapper">
+								<h5 class="vid-name"><a href="#">阿富汗</a></h5>
+								<div class="info">
+									<h6>By <a href="#">Kelvin</a></h6>
+									<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+									<span><i class="fa fa-heart"></i>1,200</span>
+								</div>
+							</div>
+						</div>
+						<div class="post wrap-vid">
+							<div class="zoom-container">
+										<div class="zoom-caption">
+											<span>Youtube</span>
+											<a href="single.html">
+												<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+											</a>
+											<p>阿富汗</p>
+										</div>
+										<img src="../static/images/2.jpg" />
+									</div>
+							<div class="wrapper">
+								<h5 class="vid-name"><a href="#">阿富汗</a></h5>
+								<div class="info">
+									<h6>By <a href="#">Kelvin</a></h6>
+									<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+									<span><i class="fa fa-heart"></i>1,200</span>
+								</div>
+							</div>
+						</div>
+						<div class="post wrap-vid">
+							<div class="zoom-container">
+								<div class="zoom-caption">
+									<span>Youtube</span>
+									<a href="single.html">
+										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+									</a>
+									<p>阿富汗</p>
+								</div>
+								<img src="../static/images/3.jpg" />
+							</div>
+							<div class="wrapper">
+								<h5 class="vid-name"><a href="#">阿富汗</a></h5>
+								<div class="info">
+									<h6>By <a href="#">Kelvin</a></h6>
+									<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+									<span><i class="fa fa-heart"></i>1,200</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!---- Start Widget ---->
+				<div class="widget ">
+					<div class="heading"><h4>推荐视频</h4></div>
+					<div class="content">
+						<div class="wrap-vid">
+							<div class="zoom-container">
+								<div class="zoom-caption">
+									<span>Youtube</span>
+									<a href="single.html">
+										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+									</a>
+									<p>阿富汗</p>
+								</div>
+								<img src="../static/images/1.jpg" />
+							</div>
+							<h3 class="vid-name"><a href="#">阿富汗</a></h3>
+							<div class="info">
+								<h5>By <a href="#">Kelvin</a></h5>
+								<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+								<span><i class="fa fa-heart"></i>1,200</span>
+							</div>
+						</div>
+						<div class="wrap-vid">
+							<div class="zoom-container">
+								<div class="zoom-caption">
+									<span>Youtube</span>
+									<a href="single.html">
+										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+									</a>
+									<p>阿富汗</p>
+								</div>
+								<img src="../static/images/2.jpg" />
+							</div>
+							<h3 class="vid-name"><a href="#">阿富汗</a></h3>
+							<div class="info">
+								<h5>By <a href="#">Kelvin</a></h5>
+								<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+								<span><i class="fa fa-heart"></i>1,200</span>
+							</div>
+						</div>
+						<div class="wrap-vid">
+							<div class="zoom-container">
+								<div class="zoom-caption">
+									<span>Youtube</span>
+									<a href="single.html">
+										<i class="fa fa-play-circle-o fa-5x" style="color: #fff"></i>
+									</a>
+									<p>阿富汗</p>
+								</div>
+								<img src="../static/images/3.jpg" />
+							</div>
+							<h3 class="vid-name"><a href="#">阿富汗</a></h3>
+							<div class="info">
+								<h5>By <a href="#">Kelvin</a></h5>
+								<span><i class="fa fa-calendar"></i>25/3/2015</span> 
+								<span><i class="fa fa-heart"></i>1,200</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-            // 设置当前活动的按钮样式
-            cultureBtn.classList.remove('active');
-            diplomacyBtn.classList.remove('active');
-            historyBtn.classList.add('active');
-        });
+<footer>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-footer footer-1">
+						<div class="footer-heading"><h1><span style="color: #fff;">阿富汗国情小站</span></h1></div>
+						<div class="content">
+							<p>新闻第一时间为您呈现.</p>
+							<strong>邮箱:</strong>
+							<form action="#" method="post">
+								<input type="text" name="your-name" value="" size="40" placeholder="你的邮箱" />
+								<input type="submit" value="提交" class="btn btn-3" />
+							</form>
+						</div>
+					</div>
+					<div class="col-md-4 col-footer footer-2">
+						
+					</div>
+					<div class="col-md-4 col-footer footer-3">
+						<div class="footer-heading"><h4>友情链接</h4></div>
+						<div class="content">
+							<ul>
+								<li><a href="#">国家建设</a></li>
+								<li><a href="#">最新掌控</a></li>
+								<li><a href="#">情报局</a></li>
+								<li><a href="#">联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copy-right">
+			<p>Copyright &copy; 2024</p>
+		</div>
+	</footer>
+
+    });
     </script>
+	
 </body>
 </html>
