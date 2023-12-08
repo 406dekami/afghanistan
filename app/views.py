@@ -54,3 +54,7 @@ def output_all_entries(request):
 
 def contact(request):
     return render(request, 'culture.html')
+
+
+def map(request):
+    return render(request, 'map.html')
