@@ -1,0 +1,18 @@
+.scrolling-text-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: scrollText 40s linear infinite; /* 修改10s为你想要的滚动时间 */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,9 +1,8 @@
 from django.http import Http404
 from django.shortcuts import render
 from django.views.generic import View
-from django.urls import reverse
+
 from app.models import AfghanistanPopulation
-from django.shortcuts import redirect
 
 
 # Create your views here.
@@ -63,3 +62,7 @@ def map(request):
 
 def error(request):
     raise Http404(request, '404.html')
+
+
+def google(request):
+    return render(request, 'google.html')

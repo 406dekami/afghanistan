@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from .views import afghanistan_overview, history, diplomacy, culture, output_all_entries, Index, contact,map
+from .views import afghanistan_overview, history, diplomacy, culture, output_all_entries, Index, contact, map, google
 
 app_name = 'app'
 urlpatterns = [
@@ -15,4 +15,5 @@ urlpatterns = [
     path('Afghanistan/message', output_all_entries, name='message'),
     path('Afghanistan/contact',contact,name='contact'),
     path('Afghanistan/map',map,name='map'),
+    path('Afghanistan/google',google,name='google'),
 ]
