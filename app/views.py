@@ -1,8 +1,8 @@
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from django.shortcuts import render
 from django.views.generic import View
 
-from app.models import AfghanistanPopulation
+from app.models import AfghanistanPopulation, User
 
 
 # Create your views here.
@@ -66,3 +66,18 @@ def error(request):
 
 def google(request):
     return render(request, 'google.html')
+
+
+def process_form(request):
+    if request.method == 'POST':
+        # 获取表单数据
+        email = request.POST.get('email')
+
+        # 创建一个新的User对象
+        user = User(email=email)
+
+        # 保存到数据库
+        user.save()
+
+        # 返回响应给客户端
+        return HttpResponse('表单已成功提交')

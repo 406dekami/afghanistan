@@ -782,14 +782,15 @@
                         <h1><span style="color: #fff;">阿富汗国情小站</span></h1>
                     </div>
                     <div class="content">
-                        <p>新闻第一时间为您呈现.</p>
-                        <strong>邮箱:</strong>
-                        <form action="#" method="post">
-                            <label>
-                                <input type="text" name="your-name" value="" size="40" placeholder="你的邮箱"/>
-                            </label>
-                            <input type="submit" value="提交" class="btn btn-3"/>
+                        <h4><span style="color: #fff;">留下您的电子邮箱,我们会联系您</span></h4>
+                        <form method="post" action="/process_form">
+                            {% csrf_token %}
+                            <label>邮箱：<input type="email" name="email" required
+                                               placeholder="请输入您的邮箱地址"></label>
+
+                            <input type="submit" value="提交">
                         </form>
+
                     </div>
                 </div>
                 {# <div class="col-md-4 col-footer footer-2">#}
@@ -834,8 +835,9 @@
         </div>
     </div>
     <div class="copy-right">
-        <p>Copyright &copy; 2024</p>
+        <p>版权所有 &copy; 2024 - 阿富汗国情小站</p>
     </div>
+
 </footer>
 <!-- Footer -->
 
@@ -894,5 +896,27 @@
     });
 </script>
 </body>
+<script>
+    // 获取表单元素
+    var myForm = document.getElementById('myForm');
 
+    // 监听表单的提交事件
+    myForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // 阻止表单的默认提交行为
+
+        // 发送异步请求
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // 提交成功后弹出提示窗口
+                alert('提交成功！');
+            }
+        };
+
+        xhr.open(myForm.method, myForm.action, true);
+        xhr.setRequestHeader('X-CSRFToken', '{{ csrf_token }}'); // 设置CSRF令牌
+        xhr.send(new FormData(myForm));
+    });
+
+</script>
 </html>
