@@ -107,7 +107,7 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -119,7 +119,7 @@ STATICFILES_DIRS = [
 ]
 
 # STATIC_ROOT = './static/admin/'
-STATIC_ROOT = os.path.join(BASE_DIR, './templates/simpleui/')
+# STATIC_ROOT = os.path.join(BASE_DIR, './templates/simpleui/')
 
 SIMPLEUI_HOME_INFO = False
 

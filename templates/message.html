@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>Afghanistan Population Entries</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="这是阿富汗国情小站的人口信息">
+    <meta name="author" content="非凡大师小组">
+    <title>阿富汗人口信息</title>
+    <link rel="stylesheet" href="/static/font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
 </head>
 <body>
-<div style="text-align: center;">Afghanistan Population Entries</div>
+
+
 <style>
     table {
         width: 100%;
         border-collapse: collapse;
+        border: 1px solid black; /* 添加黑色边框 */
+        background-color: white; /* 设置背景为白色 */
+        color: black; /* 设置文字颜色为黑色 */
     }
 
     table caption {
@@ -18,7 +28,7 @@
     }
 
     th, td {
-        border: 1px solid #999;
+        border: 1px solid black;
         text-align: center;
         padding: 20px 0;
     }
@@ -53,8 +63,40 @@
         margin: 0;
         padding: 20px;
     }
+</style>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+        font-size: 0.8em; /* 缩小字体 */
+    }
 
 </style>
+{#<div style="background-color: #202020; /* 灰色 */#}
+{#            padding: 20px;#}
+{#            border-radius: 10px;#}
+{#            box-shadow: 2px 2px 5px #888888;#}
+{#            height: auto; /* 更改为自适应高度 */#}
+{#            display: flex;">#}
+<button onclick="goBack()" style="background-color: #222222;
+        border: 10px;
+        color: #f0f0f0;
+        text-align: left;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 4px;
+        cursor: pointer;
+        border-radius: 10px;
+        height: 100%;">
+    <span>返回</span>
+</button>
+
+
+<div style="text-align: center;color: black">Afghanistan Population Entries</div>
 <table>
     <caption>阿富汗人口现状</caption>
     <thead>
@@ -95,6 +137,14 @@
     {% endfor %}
     </tbody>
 </table>
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
 </body>
 </html>
 

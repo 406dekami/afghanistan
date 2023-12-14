@@ -2,7 +2,7 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import render
 from django.views.generic import View
 
-from app.models import AfghanistanPopulation, User
+from .models import AfghanistanPopulation, User
 
 
 # Create your views here.
@@ -53,7 +53,7 @@ def output_all_entries(request):
 
 
 def contact(request):
-    return render(request, 'culture.html')
+    return render(request, 'contact.html')
 
 
 def map(request):
@@ -64,8 +64,8 @@ def error(request):
     raise Http404(request, '404.html')
 
 
-def google(request):
-    return render(request, 'google.html')
+def review(request):
+    return render(request, 'review.html')
 
 
 def process_form(request):
